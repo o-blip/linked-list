@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# class defining basic singly linked list with basic functions
 class LinkedList
   def initialize
     @head = nil
@@ -109,7 +112,7 @@ class LinkedList
 
     string = ''
     current_node = @head
-    for i in 0..self.size-1 do
+    (0..size - 1).each do
       string << "(#{current_node.value}) -> "
       current_node = current_node.next_node
     end
@@ -117,6 +120,7 @@ class LinkedList
   end
 end
 
+# class for nodes of linked list, includes data and pointer to next node
 class Node
   attr_accessor :value, :next_node
 
